@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .judul {
+        color: #ff0000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- inline css -->
+    <h1 style="color: #0088cc">Hallo saya sedang belajar css</h1>
+
+    <!-- internal css -->
+    <h1 class="judul">Ini adalah judul dengan internal css</h1>
+
+    <h1 class="title">Ini adalah title dari external css</h1>
+
+    <table
+      style="
+        width: 80dvw;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        border-collapse: collapse;
+      "
+      border="1"
+    >
+      <thead>
+        <th>Nama</th>
+        <th>Kota</th>
+        <th>Alamat</th>
+        <th>Status</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Asep</td>
+          <td>Jakarta Barat</td>
+          <td>Palmerah Utama</td>
+          <td>Pekerja Aktif</td>
+        </tr>
+        <tr>
+          <td>Jajang</td>
+          <td colspan="3" style="color: red; text-align: center">
+            Pekerja Non Aktif
+          </td>
+        </tr>
+        <tr>
+          <td>Maman</td>
+          <td>Jakarta Barat</td>
+          <td>Palmerah 3</td>
+          <td>Pekerja Aktif</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="content-1">
+      <p class="contoh">Ini adalah contoh konten</p>
+    </div>
+
+    <div class="">
+      <p class="contoh">
+        Ini adalah contoh konten <a href="" class="btn-title">Klik judul</a>
+      </p>
+    </div>
+
+    <div class="kotak">
+      <p>Ini adalah kotak</p>
+    </div>
+
+    <div class="card">
+      <p>Ini adalah kotak gambar</p>
+    </div>
+
+    <div class="container">
+      <!-- display block -->
+
+      <h2>display block :</h2>
+
+      <ol>
+        <li>ukuran bisa diatur</li>
+        <li>padding dan margin bisa diatur</li>
+      </ol>
+
+      <div class="ukuran">Display Block (TAG)</div>
+      <div class="ukuran">Display Block (TAG)</div>
+
+      <span class="d-block ukuran">Span Block</span>
+      <span class="d-block ukuran">Span Block</span>
+    </div>
+
+    <div class="container">
+      <h2>Display Inline</h2>
+      <ol>
+        <li>ukuran tidak bisa diatur, (mengikuti konten)</li>
+        <li>
+          padding bisa diatur, margin yang berlaku hanya X margin y tidak
+          berlaku
+        </li>
+      </ol>
+      <div class="" style="margin: 100px 0; ">
+        <div class="ukuran d-inline">Display inline</div>
+        <div class="ukuran d-inline">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          eligendi.
+        </div>
+
+        <span class="ukuran">Span inline</span>
+        <span class="ukuran">Span inline</span>
+      </div>
+      
+      <div class="simple-navbar">
+        <ul class="navbar-inline">
+          <li>Home</li>
+          <li>Gallery</li>
+          <li>Product</li>
+          <li>Services</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <h2>Display Inline Block</h2>
+      <ol>
+        <li>ukuran bisa diatur</li>
+        <li>
+          padding bisa diatur, margin yang berlaku hanya X margin y tidak
+          berlaku
+        </li>
+      </ol>
+      <div class="" style="margin: 100px 0; ">
+        <div class="ukuran d-inline-block">Display -block Block</div>
+        <div class="ukuran d-inline-block">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          eligendi.
+        </div>
+
+        <span class="ukuran">Span inline block</span>
+        <span class="ukuran">Span inline block</span>
+      </div>
+      
+      <div class="simple-navbar">
+        <ul class="navbar-inline-block">
+          <li>Home</li>
+          <li>Gallery</li>
+          <li>Product</li>
+          <li>Services</li>
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>

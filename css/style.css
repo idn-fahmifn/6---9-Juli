@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.title{
+    color: #a52a2a;
+}
+
+th, td{
+    border: 1px solid #4e4e4e;
+    padding: 20px;
+}
+
+.contoh{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-1 .contoh{
+    color: #0088cc;
+    font-size: 1.2rem;
+}
+
+.btn-title{
+    padding: 10px;
+    margin: 10px;
+    background-color: #0088cc;
+    color: #ffff;
+    text-decoration: none;
+}
+
+.btn-title:hover{
+    background-color: #024567;
+}
+
+.kotak{
+    width: 300px;
+    height: 100px;
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin: 40px;
+    border-radius: 8px;
+    color: #ffff;
+    background: linear-gradient(to top right, #0088cc, #ff0000);
+    background-size: 400%;
+}
+
+.card{
+    width: 300px;
+    height: 100px;
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin: 40px;
+    border-radius: 8px;
+    background-image: url('https://media.licdn.com/dms/image/v2/C561BAQEF2NNqqAZ9Sg/company-background_10000/company-background_10000/0/1632471137485/idnetworkers_cover?e=2147483647&v=beta&t=36ukHj8bkxGuDQsKdRAUvAHpYzYnnUF9Iggzn8Q-siI');
+    background-size: cover;
+}
+
+.container{
+    width: 80vw;
+    min-height: 200px;
+    border: 0.5px solid #4e4e4e;
+    margin: 20px;
+    padding: 20px;
+}
+
+.d-block{
+    display: block;
+}
+
+.d-inline{
+    display: inline;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.ukuran{
+    width: 300px;
+    min-height: 20px;
+    margin: 10px 30px;
+    padding:30px 10px;
+    background-color: #0088cc;
+}
+
+.simple-navbar{
+    width: 80%;
+    min-height: 100px;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.navbar-inline li{
+    display: inline;
+    margin: 20px;
+}
+
+.navbar-inline-block li{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+}
+
+.navbar-inline-block li:hover{
+    border-bottom: 3px solid #0088cc;
+}
+
+.navbar-inline li:hover{
+    border-bottom: 3px solid #0088cc;
+}
+
+

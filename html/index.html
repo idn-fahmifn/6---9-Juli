@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hallo saya sedang belajar HTML</h1>
+    <h2>Hallo saya sedang belajar HTML</h2>
+    <h3>Hallo saya sedang belajar HTML</h3>
+    <h4>Hallo saya sedang belajar HTML</h4>
+    <h5>Hallo saya sedang belajar HTML</h5>
+    <h6>Hallo saya sedang belajar HTML</h6>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
+      Beatae, maxime! Adipisci sapiente, veritatis maiores corporis deleniti
+      tempore temporibus ducimus quae possimus repudiandae tenetur repellat
+      nemo, quam omnis aspernatur harum modi?
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non architecto
+      soluta blanditiis aperiam quibusdam maiores! Neque reiciendis distinctio
+      reprehenderit expedita natus cum corporis minus rem eligendi repellat
+      voluptate saepe velit nulla illo praesentium totam, porro maiores officia.
+      Ea, possimus deleniti.
+    </p>
+
+    <p>
+      Hallo mas, tertarik dengan produk ini?
+      <a href="https://google.com" target="_blank">silakan klik disini.</a>
+    </p>
+    <p>Kembali ke <a href="home.html">Halaman utama</a></p>
+
+    <!-- list - ada 2 jenis  -->
+
+    <!-- 1. ol = ordered list -->
+
+    <p>Tag elemen dasar pada html antara lain :</p>
+    <ol start="3">
+      <li>tipografi (judul, paragaf dll)</li>
+      <li>media (gambar, video atau audio)</li>
+      <li>HTML Table</li>
+    </ol>
+
+    <p>Menu makan siang :</p>
+    <!-- 2. ul = unordered list -->
+    <ul>
+      <li>bakso</li>
+      <li>Ikan Goreng</li>
+      <li>Ikan Bakar</li>
+      <li>Ayam Bakar</li>
+    </ul>
+
+    <p></p>
+
+    <!-- html media -->
+    <!-- menggunakan gambar :  -->
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/9584/9584876.png"
+      width="100"
+      alt="Ini gambar Contoh"
+    />
+
+    <img
+      src="https://www.shutterstock.com/image-photo/on-white-background-buttons-used-260nw-2048122016.jpg"
+      alt="example 2"
+      width="100"
+    />
+
+    <img src="asset/sample.webp" width="100" alt="gambar sample" />
+
+    <!-- menggunakan video -->
+    <video
+      src="https://res.cloudinary.com/demo/video/upload/dirt_bike.mp4"
+      width="240"
+      autoplay
+      muted
+      loop
+    ></video>
+    <audio
+      src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"
+      controls
+    ></audio>
+
+    <!-- table -->
+      <table style="width: 80dvw; margin-top: 40px; margin-bottom: 30px; border-collapse: collapse;" border="1">
+        <thead>
+            <th>Nama</th>
+            <th>Kota</th>
+            <th>Alamat</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Asep</td>
+                <td>Jakarta Barat</td>
+                <td>Palmerah Utama</td>
+                <td>Pekerja Aktif</td>
+            </tr>
+            <tr>
+                <td>Jajang</td>
+                <td colspan="3" style="color: red; text-align: center;">Pekerja Non Aktif</td>
+            </tr>
+            <tr>
+                <td>Maman</td>
+                <td>Jakarta Barat</td>
+                <td>Palmerah 3</td>
+                <td>Pekerja Aktif</td>
+            </tr>
+            <tr>
+                <td>Bubun</td>
+                <td>Jakarta Barat</td>
+                <td rowspan="3" style="text-align: center;">Palmerah 3</td>
+                <td>Pekerja Aktif</td>
+            </tr>
+            <tr>
+                <td>Fahmi</td>
+                <td>Jakarta Barat</td>
+                <td>Pekerja Aktif</td>
+            </tr>
+            <tr>
+                <td>Dadang</td>
+                <td>Jakarta Barat</td>
+                <td>Pekerja Aktif</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- form html -->
+
+    <form action="/semantic.html" method="post">
+      <div class="">
+        <label for="namaLengkap">Nama Lengkap</label>
+        <input
+          type="text"
+          name="nama_lengkap"
+          id="namaLengkap"
+          required
+          placeholder="nama lengkap kamu"
+        />
+      </div>
+      <div class="">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          required
+          value="asepbot"
+          readonly
+        />
+      </div>
+      <div class="">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div class="">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required />
+        <input type="range" name="password" id="password" required />
+      </div>
+      <div class="">
+        <label for="alamat">Alamat</label>
+        <textarea name="alamat" id="alamat">hallo</textarea>
+      </div>
+      <div class="">
+        <label for="divisi">Divisi</label>
+        <select name="divisi" id="divisi">
+          <option value="" disabled>Pilih divisi</option>
+          <option value="front-end">Front-end</option>
+          <option value="back-end">Back-end</option>
+          <option value="Project Manager">Project Manager</option>
+        </select>
+      </div>
+      <div class="">
+        <button type="submit">Kirim data</button>
+      </div>
+    </form>
+
+   
+  </body>
+</html>
