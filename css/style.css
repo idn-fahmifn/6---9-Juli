@@ -62,7 +62,6 @@ td {
 
 .container {
   width: 80vw;
-  min-height: 400px;
   border: 0.5px solid #4e4e4e;
   margin: 20px;
   padding: 20px;
@@ -181,7 +180,15 @@ td {
     z-index: 1;
 }
 
-.d-flex .card{
+.container-modern{
+    width: 80dvw;
+    /* min-height: 400px; */
+    border: 0.5px #33333360 solid;
+    margin: 40px 10px;
+    padding: 20px;
+}
+
+.card-flex{
     flex-basis: 200px;
     flex-shrink: 1;
     flex-grow: 1;
@@ -194,4 +201,15 @@ td {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+.d-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px; 
+    gap: 20px;
+}
+
+.card-grid{
+    border: 0.5px solid #ccc;
 }
