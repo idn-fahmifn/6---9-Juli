@@ -54,8 +54,9 @@ td {
   padding: 30px;
   margin: 40px;
   border-radius: 8px;
-  background-color: #024567;
+  /* background-color: #024567; */
   color: #f1f1f1;
+  animation: color 3s infinite alternate;
   /* background-image: url('https://media.licdn.com/dms/image/v2/C561BAQEF2NNqqAZ9Sg/company-background_10000/company-background_10000/0/1632471137485/idnetworkers_cover?e=2147483647&v=beta&t=36ukHj8bkxGuDQsKdRAUvAHpYzYnnUF9Iggzn8Q-siI'); */
   /* background-size: cover; */
 }
@@ -315,5 +316,23 @@ td {
         transform: translateY(0);
     } to {
         transform: translateY(-100px);
+    }
+}
+
+@keyframes color {
+    0%{
+        background-color: #0088cc;
+    }
+    50%{
+        background-color: #fbff00;
+        transform: scale(1.4);
+    }
+    75%{
+        background-color: #ff4800;
+        transform: scale(1.6);
+    }
+    100%{
+        background-color: #ff0000;
+        transform: scale(1.8);
     }
 }
