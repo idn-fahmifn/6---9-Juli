@@ -247,7 +247,7 @@ for (let i = 0; i < mobil.length; i++) {
 // while loop
 
 let password = "belajarjs";
-let input = prompt("Masukan Password");
+// let input = prompt("Masukan Password");
 
 //  jika password input tidak sesuai maka akan diulangi
 
@@ -269,23 +269,106 @@ const batas = 3;
 let percobaan = 0;
 
 // izinkan user jika kesempatannya masih ada 3
-while (percobaan < batas) {
-  pass = prompt("Masukan password kamu.");
-  // saat kita nyoba 1 kali, nilai percobaan nambah 1
-  percobaan++;
-  // kondisi saat password benar
-  if (pass === passwordBenar) {
-    alert("Password yang kamu masukan sesuai!");
-    break;
-  }
+// while (percobaan < batas) {
+//   pass = prompt("Masukan password kamu.");
+//   // saat kita nyoba 1 kali, nilai percobaan nambah 1
+//   percobaan++;
+//   // kondisi saat password benar
+//   if (pass === passwordBenar) {
+//     alert("Password yang kamu masukan sesuai!");
+//     break;
+//   }
 
-  // jika batas sudah habis
+//   // jika batas sudah habis
 
-  if (percobaan === batas) {
-    alert("Akun kamu diblokir, karena sudah melewati 3 kali percobaan");
+//   if (percobaan === batas) {
+//     alert("Akun kamu diblokir, karena sudah melewati 3 kali percobaan");
+//   } else {
+//     alert(
+//       `Password salah, Kamu bisa ulangi sebanyak ${batas - percobaan} kali lagi.`,
+//     );
+//   }
+// }
+
+// function biasa
+function hallo() {
+  let show = alert("Hallo ini adalah alert");
+}
+
+// funtion expression
+let sapa = function () {
+  // isi function.
+};
+
+// arrow function
+let hello = () => {
+  // isi code pada function
+};
+
+// parameter & argumen
+function training(namaPeserta, namaKelas) {
+  console.log(
+    `Hallo Kak, ${namaPeserta}, Kamu terdaftar ikut kelas ${namaKelas}`,
+  );
+}
+
+training("Asep", "Mikrotik");
+
+// menghitung luas persegi panjang
+
+let persegiPanjang = function (panjang, lebar) {
+  let luas = panjang * lebar;
+  return luas;
+};
+// console.log(luas)
+console.log(persegiPanjang(10, 50));
+
+let segitiga = (alas, tinggi) => {
+  let luas = (alas * tinggi) / 2;
+  return luas;
+};
+
+console.log(segitiga(10, 15));
+
+// tentukan operatornya
+
+function jumlah(bil1, bil2) {
+  return bil1 + bil2;
+}
+
+function kurang(bil1, bil2) {
+  return bil1 - bil2;
+}
+
+function kali(bil1, bil2) {
+  return bil1 * bil2;
+}
+
+function bagi(bil1, bil2) {
+  return bil1 / bil2;
+}
+
+// fungsi utama kalkulator :
+function calculator() {
+  let input1 = Number(prompt("masukan angka pertama : "))
+  let input2 = Number(prompt("masukan angka kedua : "))
+  let operator = prompt("masukan operator (+ , - , * , /) ");
+
+  let result;
+
+  // Logika Perhitungan
+  if (operator === "+") {
+    result = jumlah(input1, input2);
+  } else if (operator === "-") {
+    result = kurang(input1, input2);
+  } else if (operator === "*") {
+    result = kali(input1, input2);
+  } else if (operator === "/") {
+    result = bagi(input1, input2);
   } else {
-    alert(
-      `Password salah, Kamu bisa ulangi sebanyak ${batas - percobaan} kali lagi.`,
-    );
+    alert('input yang kamu masukan salah.')
   }
+
+  alert(`hasil dari ${input1} ${operator} ${input2} adalah ${result}`)
+
 }
