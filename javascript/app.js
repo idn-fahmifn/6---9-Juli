@@ -531,8 +531,30 @@ fetch("https://6a4f4403f45d5352b611257d.mockapi.io/api-latihan/v1/products")
   .catch((err) => console.log("gagal : ", err));
 
 async function loadData() {
-    const api = await 
-    fetch("https://6a4f4403f45d5352b611257d.mockapi.io/api-latihan/v1/products")
-    const data = await api.json();
+  const api = await fetch(
+    "https://6a4f4403f45d5352b611257d.mockapi.io/api-latihan/v1/products",
+  );
+  const data = await api.json();
+  console.log(data);
+}
+
+// cara yang direkomendasi (error handling)
+
+async function loadProduct() {
+  try {
+    const api =
+      "https://6a4f4403f45d5352b611257d.mockapi.io/api-latihan/v1/products";
+    const res = await fetch(api);
+
+    // cek status respon, oke = 200
+    if (!res.ok) {
+      throw new Error(`HTTP Error : ${res.status}`);
+    }
+
+    const data = await res.json();
     console.log(data);
+
+  } catch (error) {
+    console.log("Terjadi Kesalahan : ", error.message)
+  }
 }
