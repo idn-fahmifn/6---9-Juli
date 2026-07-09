@@ -110,7 +110,7 @@
         margin-top: 8px;
       }
 
-      .btn-refresh{
+      .btn-refresh {
         background-color: var(--accent);
         padding: 0.3rem;
         border: none;
@@ -119,7 +119,7 @@
         transition: 0.5s ease-in-out;
       }
 
-      .btn-refresh:hover{
+      .btn-refresh:hover {
         background-color: #b63d00;
         transform: translateY(-5px);
         cursor: pointer;
@@ -211,22 +211,22 @@
     <aside>
       <!-- area product -->
       <section style="margin-bottom: 100px">
-          <h2>Data Product</h2>
+        <h2>Data Product</h2>
         <article>
-          <button type="button" onclick="return loadProduct()" class="btn-refresh"> 🔄 Refresh Data</button>
+          <button
+            type="button"
+            onclick="return loadProduct();"
+            class="btn-refresh"
+          >
+            🔄 Refresh Data
+          </button>
           <table>
             <thead>
               <th>Nama Produk</th>
               <th>Merk</th>
               <th>Gambar</th>
             </thead>
-            <tbody id="list-data">
-              <tr>
-                <td>contoh</td>
-                <td>contoh</td>
-                <td>contoh</td>
-              </tr>
-            </tbody>
+            <tbody id="list-data"></tbody>
           </table>
         </article>
       </section>
@@ -238,6 +238,9 @@
 
     <script>
       async function loadProduct() {
+        const bodyList = document.getElementById("list-data");
+        bodyList.innerHTML = ` <tr><td colspan="3">⌛️ sedang memuat data...</td></tr>`;
+
         try {
           const api =
             "https://6a4f4403f45d5352b611257d.mockapi.io/api-latihan/v1/products";
@@ -250,32 +253,32 @@
 
           const data = await res.json();
 
+          bodyList.innerHTML = "";
+
+          if (data.length === 0) {
+            bodyList.innerHTML = `<tr><td colspan="3">Data tidak ditemukan</td></tr>`;
+          }
+
           // tampilkan data ke halaman web
-          const bodyList = document.getElementById('list-data')
-          const tableRow = document.createElement("tr");
-          const productName = document.createElement("td");
-          const brandName = document.createElement("td");
-          const tableImage = document.createElement("td");
-          const image = document.createElement("img");
 
           data.forEach((product) => {
+            const tableRow = document.createElement("tr");
+            const productName = document.createElement("td");
+            const brandName = document.createElement("td");
+            const tableImage = document.createElement("td");
+            const image = document.createElement("img");
 
-            productName.textContent = product.product_name
-            brandName.textContent = product.brand
-            image.setAttribute("src", product.image)
-            image.setAttribute("width", 60)
+            productName.textContent = product.product_name;
+            brandName.textContent = product.brand;
+            image.setAttribute("src", product.image);
+            image.setAttribute("width", 60);
 
-            bodyList.appendChild(tableRow)
-            tableRow.appendChild(productName)
-            tableRow.appendChild(brandName)
-            tableRow.appendChild(brandName)
-            tableRow.appendChild(tableImage)
-            tableImage.appendChild(image)
-
-          })
-
-
-
+            bodyList.appendChild(tableRow);
+            tableRow.appendChild(productName);
+            tableRow.appendChild(brandName);
+            tableRow.appendChild(tableImage);
+            tableImage.appendChild(image);
+          });
         } catch (error) {
           console.log("Terjadi Kesalahan : ", error.message);
         }
