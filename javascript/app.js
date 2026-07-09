@@ -350,8 +350,8 @@ function bagi(bil1, bil2) {
 
 // fungsi utama kalkulator :
 function calculator() {
-  let input1 = Number(prompt("masukan angka pertama : "))
-  let input2 = Number(prompt("masukan angka kedua : "))
+  let input1 = Number(prompt("masukan angka pertama : "));
+  let input2 = Number(prompt("masukan angka kedua : "));
   let operator = prompt("masukan operator (+ , - , * , /) ");
 
   let result;
@@ -366,9 +366,75 @@ function calculator() {
   } else if (operator === "/") {
     result = bagi(input1, input2);
   } else {
-    alert('input yang kamu masukan salah.')
+    alert("input yang kamu masukan salah.");
   }
 
-  alert(`hasil dari ${input1} ${operator} ${input2} adalah ${result}`)
-
+  alert(`hasil dari ${input1} ${operator} ${input2} adalah ${result}`);
 }
+
+// DOM => Document Object Model
+
+const textTitle = document.getElementById("title");
+const textSubtitle = document.querySelector(".sub-title");
+const textKonten = document.querySelector("#content");
+const listItem = document.querySelectorAll("li");
+
+// DOM Manipulation
+textTitle.textContent = "Elemen ini sudah diubah";
+textKonten.innerHTML = `<a href="#">Masuk ke kelas</a>`;
+
+// jika mau menambah langsung sebuah class :
+// ubah style
+textTitle.classList.add("text-title");
+textSubtitle.classList.remove("font-kecil");
+
+console.log(textTitle);
+console.log(textSubtitle);
+console.log(textKonten);
+console.log(listItem);
+
+// Klik sederhana dengan button
+const btnClick = document.getElementById("btn-click");
+
+btnClick.addEventListener("click", () => {
+  textTitle.textContent = "Button berhasil diklik";
+  alert("Saya berhasil keluar!");
+});
+
+const counter = document.querySelector(".counter");
+const btnTambah = document.getElementById("btn-tambah");
+const btnKurang = document.getElementById("btn-kurang");
+const btnReset = document.getElementById("btn-reset");
+let hitung = 0;
+
+btnTambah.addEventListener("click", () => {
+  hitung++;
+  counter.textContent = hitung;
+  counter.style.color = "#378500";
+  btnKurang.disabled = false;
+});
+
+btnKurang.addEventListener("click", () => {
+  hitung--;
+  counter.textContent = hitung;
+  counter.style.color = "#ff0000";
+});
+
+btnReset.addEventListener("click", () => {
+  hitung = 0;
+  counter.textContent = hitung;
+  counter.style.color = "#000000";
+  btnKurang.disabled = true;
+});
+
+if (hitung === 0) {
+  btnKurang.disabled = true;
+} else {
+  btnKurang.disabled = false;
+}
+// Chalenges event listener :
+
+// buatkan counter dengan tombol : Tambah ++, Kurang --, reset.
+// saat tambah, colornya berwarna hijau
+// saat kurang, colornya berwarna merah
+// saat direset, kembali ke 0, warnanya hitam
