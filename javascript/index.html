@@ -32,11 +32,9 @@
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, qui.
     </p>
 
-    <ul>
-        <li>option 1</li>
-        <li>option 2</li>
-        <li>option 3</li>
-        <li>option 4</li>
+    <p>Pilihan Training yang tersedia : </p>
+    <ul id="list">
+        
     </ul>
 
     <button type="button" id="btn-click">Klik saya</button>
@@ -46,6 +44,50 @@
     <button type="button" id="btn-tambah">Tambah</button>
     <button type="button" id="btn-kurang">kurang</button>
     <button type="button" id="btn-reset">Reset</button>
+
+    <!-- <form action="" method="post" style="margin-top: 20px;">
+        <div class="">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+    </form>
+
+    <p class="nama"></p> -->
+
+
+    <!-- buat form : -->
+
+    <form action="" id="sumbitForm" style="margin-top: 30px;">
+        <div class="" style="margin-top: 10px;">
+            <label for="nama">Nama Kamu : </label>
+            <input type="text" name="nama" id="nama">
+        </div>
+        <div class="" style="margin-top: 10px;">
+            <label for="jabatan">Posisi : </label>
+            <input type="text" name="posisi" id="posisi">
+        </div>
+
+        <button type="submit" style="margin-top: 10px;">Kirimkan</button>
+    </form>
+
+    <hr>
+    <p>Output : </p>
+    <p class="pesan"></p>
+
+    <!-- 
+    
+    - form nama, 
+    - form posisi
+
+    input nama -> posisi => 
+
+    output : 
+    Selamat datang mas/mba asep, 
+    anda posisisnya adalah backend,
+    selamat bekerja.
+
+    -->
+
 
 
     <script>

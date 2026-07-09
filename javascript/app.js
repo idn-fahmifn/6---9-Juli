@@ -393,6 +393,19 @@ console.log(textSubtitle);
 console.log(textKonten);
 console.log(listItem);
 
+//  menambah elemen baru :
+const daftar = document.getElementById("list");
+
+let listTraining = ["Laravel", "mtcna", "ccna", "linux", "cyber security"];
+
+listTraining.forEach((kelas) => {
+  const list = document.createElement("li");
+  list.textContent = kelas;
+
+  // agar bisa nampil di ul
+  daftar.appendChild(list);
+});
+
 // Klik sederhana dengan button
 const btnClick = document.getElementById("btn-click");
 
@@ -438,3 +451,22 @@ if (hitung === 0) {
 // saat tambah, colornya berwarna hijau
 // saat kurang, colornya berwarna merah
 // saat direset, kembali ke 0, warnanya hitam
+
+// const inputNama = document.getElementById("nama")
+// const showNama = document.querySelector(".nama")
+
+inputNama.addEventListener("input", (e) => {
+    showNama.textContent = `Hallo mr/mrs. ${e.target.value}`
+})
+
+
+// listener = submit
+// ambil form 
+const form = document.getElementById("submitForm")
+
+form.addEventListener("submit", (e) => {
+
+})
+
+
+
