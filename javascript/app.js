@@ -459,37 +459,80 @@ if (hitung === 0) {
 //     showNama.textContent = `Hallo mr/mrs. ${e.target.value}`
 // })
 
-
 // listener = submit
-// ambil form 
-const form = document.getElementById("submitForm")
-const inputNama = document.getElementById("nama")
-const inputPosisi = document.getElementById("posisi")
+// ambil form
+const form = document.getElementById("submitForm");
+const inputNama = document.getElementById("nama");
+const inputPosisi = document.getElementById("posisi");
 const message = document.querySelector(".pesan");
 
 form.addEventListener("submit", (e) => {
+  // agar tidak ada reload
+  e.preventDefault;
 
-    // agar tidak ada reload
-    e.preventDefault
+  // hand;e saat nama / posisi kosong
 
-    // hand;e saat nama / posisi kosong
+  if (inputNama.value.trim() === "" || inputPosisi.value.trim() === "") {
+    message.textContent = "pastikan nama dan posisi terisi.";
+    message.style.color = "#ff0000";
 
-    if(inputNama.value.trim() === "" || inputPosisi.value.trim() === ""){
-        message.textContent = "pastikan nama dan posisi terisi."
-        message.style.color = "#ff0000";
+    return;
+  }
 
-        return;
-    }
-
-    message.textContent = `Selamat datang mas/mba ${inputNama.value}, 
+  message.textContent = `Selamat datang mas/mba ${inputNama.value}, 
     anda posisisnya adalah ${inputPosisi.value},
     selamat bekerja.
-    `
+    `;
 
-    message.style.color = "#00a200"
-    form.reset(); //kosongkan.
+  message.style.color = "#00a200";
+  form.reset(); //kosongkan.
+});
 
-})
+// javascript modern
 
+function getdata(callback) {
+  setTimeout(() => callback("datasiap"), 1000);
+}
 
+getdata((hasil) => {
+  console.log(hasil);
+});
 
+const product = [
+  { id: 1, nama: "Buku", harga: 100000 },
+  { id: 2, nama: "Sandal", harga: 150000 },
+  { id: 3, nama: "sepatu", harga: 400000 },
+  { id: 4, nama: "AC", harga: 2000000 },
+  { id: 5, nama: "Laptop", harga: 5000000 },
+  { id: 6, nama: "Tumbler", harga: 400000 },
+];
+
+// async
+async function ambilData() {
+  return new Promise((resolve, reject) => {
+    // mengirim variabel produk ke fungsi resolve
+    setTimeout(() => resolve(product), 1000);
+  });
+}
+
+// tampilkan outputnya :
+async function tampil() {
+  console.log("sedang memuat data..");
+  const data = await ambilData();
+  console.log(data);
+}
+
+// memanggil data daru server (API)
+
+// cara dasar :
+fetch("https://6a4f4403f45d5352b611257d.mockapi.io/api-latihan/v1/products")
+  .then((res) => res.json()) //ubah respon API menjadi data json
+  .then((data) => console.log(data))
+  .catch((err) => console.log("gagal : ", err));
+
+async function loadData() {
+    const api = await 
+    fetch("https://6a4f4403f45d5352b611257d.mockapi.io/api-latihan/v1/products")
+    const data = await api.json();
+    console.log(data);
+}
