@@ -455,16 +455,39 @@ if (hitung === 0) {
 // const inputNama = document.getElementById("nama")
 // const showNama = document.querySelector(".nama")
 
-inputNama.addEventListener("input", (e) => {
-    showNama.textContent = `Hallo mr/mrs. ${e.target.value}`
-})
+// inputNama.addEventListener("input", (e) => {
+//     showNama.textContent = `Hallo mr/mrs. ${e.target.value}`
+// })
 
 
 // listener = submit
 // ambil form 
 const form = document.getElementById("submitForm")
+const inputNama = document.getElementById("nama")
+const inputPosisi = document.getElementById("posisi")
+const message = document.querySelector(".pesan");
 
 form.addEventListener("submit", (e) => {
+
+    // agar tidak ada reload
+    e.preventDefault
+
+    // hand;e saat nama / posisi kosong
+
+    if(inputNama.value.trim() === "" || inputPosisi.value.trim() === ""){
+        message.textContent = "pastikan nama dan posisi terisi."
+        message.style.color = "#ff0000";
+
+        return;
+    }
+
+    message.textContent = `Selamat datang mas/mba ${inputNama.value}, 
+    anda posisisnya adalah ${inputPosisi.value},
+    selamat bekerja.
+    `
+
+    message.style.color = "#00a200"
+    form.reset(); //kosongkan.
 
 })
 
